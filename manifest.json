@@ -1,10 +1,10 @@
 {
-  "name": "FunkyBunnyFunkPicker",
-  "short_name": "Scent Picker",
+  "name": "funkybunnyfunkpicker",
+  "short_name": "scent picker",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#F3E8C8",
-  "theme_color": "#3A7D7C",
+  "theme_color": "#487A47",
   "icons": [
     {
       "src": "icon.png",
