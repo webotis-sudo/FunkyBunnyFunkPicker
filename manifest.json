@@ -1,1 +1,9 @@
+{
+  "name": "Perfume Sample Picker",
+  "short_name": "Scent Picker",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#111827"
+}
 
