@@ -1,1 +1,31 @@
+[
+  {
+    "id": "001",
+    "name": "Byredo - Mojave Ghost",
+    "group": "Fresh",
+    "location": { "rack": "A", "row": 1, "col": 1 },
+    "history": "Launched in 2014, Mojave Ghost is a woody composition inspired by the Mojave Desert. It blends ambrette and Jamaican nesberry with violet, sandalwood, and crisp amber."
+  },
+  {
+    "id": "002",
+    "name": "Le Labo - Santal 33",
+    "group": "Warm/Spicy",
+    "location": { "rack": "A", "row": 1, "col": 2 },
+    "history": "Released in 2011, Santal 33 became an iconic unisex fragrance built around Australian sandalwood and cedarwood, spiced with cardamom, iris, and smoky leather."
+  },
+  {
+    "id": "003",
+    "name": "Parfums de Marly - Delina",
+    "group": "Floral",
+    "location": { "rack": "B", "row": 2, "col": 5 },
+    "history": "Created in 2017 by Quentin Bisch, Delina is a modern Turkish rose bouquet brightened with tart rhubarb, lychee, and bergamot over a vanilla and cashmere wood base."
+  },
+  {
+    "id": "004",
+    "name": "Maison Francis Kurkdjian - Baccarat Rouge 540",
+    "group": "Date Night",
+    "location": { "rack": "C", "row": 4, "col": 8 },
+    "history": "Originally crafted in 2014 to celebrate crystal maker Baccarat's 250th anniversary, it pairs airy jasmine and saffron with mineral ambergris and freshly cut cedar."
+  }
+]
 
