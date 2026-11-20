@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>FunkyBunnyFunkPicker</title>
+  <title>funkybunnyfunkpicker</title>
   
   <!-- iOS PWA & Home Screen Icon Configuration -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="Scent Picker" />
+  <meta name="apple-mobile-web-app-title" content="scent picker" />
   <link rel="apple-touch-icon" href="icon.png" />
   <link rel="icon" type="image/png" href="icon.png" />
   <link rel="manifest" href="manifest.json" />
+
+  <!-- Cottagecore Tea Invitation Fonts -->
+  <link rel="preconnect" href="https://googleapis.com" />
+  <link rel="preconnect" href="https://gstatic.com" crossorigin />
+  <link href="https://googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -19,17 +24,23 @@
       --card: #FCF8EE;         /* Soft cream card surface */
       --text: #2B231D;         /* Dark teak wood text */
       --muted: #685B4F;        /* Warm taupe secondary text */
+      --green: #487A47;        /* Rainy courtyard garden green */
+      --green-dark: #386137;   /* Deep foliage green active state */
       --primary: #3A7D7C;      /* Vintage painted teal doors/pillars */
-      --primary-dark: #2A5E5D; /* Deep teal hover/active state */
+      --primary-dark: #2A5E5D; /* Deep teal active state */
       --accent: #E3D4AE;       /* Warm sand border & tab track */
       --pill-bg: #DCE9E7;      /* Soft seafoam/teal pill background */
       --pill-text: #235352;    /* Deep teal pill text */
       --terracotta: #A84A32;   /* Wet terracotta floor tile */
       --terracotta-bg: #F6E2DC;/* Soft terracotta tint */
-      --radius: 14px;
+      --radius: 16px;
     }
 
-    * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    * { 
+      box-sizing: border-box; 
+      font-family: 'Lora', Georgia, serif;
+      text-transform: lowercase;
+    }
     
     body {
       margin: 0;
@@ -52,17 +63,18 @@
       flex: 1;
       padding: 10px;
       border: none;
-      border-radius: 10px;
+      border-radius: 11px;
       background: transparent;
       color: var(--text);
-      font-weight: 600;
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 500;
       font-size: 15px;
       cursor: pointer;
       transition: background 0.2s;
     }
     .nav-btn.active {
       background: var(--card);
-      color: var(--primary-dark);
+      color: var(--green-dark);
       box-shadow: 0 2px 4px rgba(43, 35, 29, 0.1);
     }
 
@@ -73,19 +85,21 @@
     /* Buttons */
     .btn-primary {
       width: 100%;
-      padding: 16px;
-      background: var(--primary);
+      padding: 17px;
+      background: var(--green);
       color: #FCF8EE;
       border: none;
       border-radius: var(--radius);
-      font-size: 17px;
-      font-weight: 600;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.2px;
       cursor: pointer;
       margin-bottom: 12px;
-      box-shadow: 0 3px 8px rgba(58, 125, 124, 0.25);
+      box-shadow: 0 3px 8px rgba(72, 122, 71, 0.28);
     }
     .btn-primary:active {
-      background: var(--primary-dark);
+      background: var(--green-dark);
     }
 
     .group-grid {
@@ -100,8 +114,9 @@
       color: var(--text);
       border: 1.5px solid var(--accent);
       border-radius: var(--radius);
-      font-weight: 600;
-      font-size: 14px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 500;
+      font-size: 15px;
       cursor: pointer;
     }
     .btn-group:active {
@@ -114,7 +129,7 @@
       background: var(--card);
       border: 1.5px solid var(--accent);
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 22px;
       box-shadow: 0 4px 12px rgba(43, 35, 29, 0.08);
       margin-top: 10px;
     }
@@ -125,17 +140,19 @@
       padding: 5px 12px;
       border-radius: 20px;
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: 12px;
     }
     .perfume-title { 
       margin: 0 0 10px 0; 
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
       font-size: 22px; 
       color: var(--text);
     }
     .perfume-history { 
       margin: 0 0 20px 0; 
-      line-height: 1.55; 
+      line-height: 1.6; 
       color: var(--muted); 
       font-size: 15px; 
     }
@@ -146,8 +163,10 @@
       background: var(--terracotta-bg);
       color: var(--terracotta);
       border: 1px solid rgba(168, 74, 50, 0.25);
-      border-radius: 10px;
-      font-weight: 700;
+      border-radius: 11px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 500;
+      font-size: 15px;
       cursor: pointer;
     }
     .undo-bar {
@@ -160,15 +179,15 @@
       border-radius: var(--radius);
       margin-top: 12px;
       font-size: 14px;
-      font-weight: 500;
     }
     .undo-bar button {
       background: #FCF8EE;
       color: var(--terracotta);
       border: none;
       padding: 6px 12px;
-      border-radius: 6px;
-      font-weight: 700;
+      border-radius: 8px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
       cursor: pointer;
     }
 
@@ -185,12 +204,12 @@
       outline: none;
     }
     .search-input:focus {
-      border-color: var(--primary);
+      border-color: var(--green);
     }
     .list-item {
       background: var(--card);
       padding: 14px;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-bottom: 8px;
       display: flex;
       justify-content: space-between;
@@ -201,9 +220,9 @@
       background: var(--terracotta-bg);
       color: var(--terracotta);
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 600;
       padding: 2px 6px;
-      border-radius: 4px;
+      border-radius: 6px;
       margin-left: 6px;
     }
 
@@ -221,44 +240,45 @@
       background: var(--accent);
       color: var(--text);
       border: none;
-      border-radius: 10px;
+      border-radius: 11px;
+      font-family: 'Fraunces', Georgia, serif;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 500;
       cursor: pointer;
     }
   </style>
 </head>
 <body>
 
-  <!-- View Switcher -->
+  <!-- view switcher -->
   <nav class="nav-tabs">
-    <button class="nav-btn active" onclick="switchView('pick', this)">Pick a Scent</button>
-    <button class="nav-btn" onclick="switchView('find', this)">Find a Spot</button>
+    <button class="nav-btn active" onclick="switchView('pick', this)">pick a scent</button>
+    <button class="nav-btn" onclick="switchView('find', this)">find a spot</button>
   </nav>
 
-  <!-- VIEW 1: PICK A SCENT -->
+  <!-- view 1: pick a scent -->
   <section id="view-pick" class="view active">
-    <button class="btn-primary" onclick="pickRandom()">🎲 Pick Any Scent</button>
+    <button class="btn-primary" onclick="pickRandom()">pick a sweetness</button>
     
     <div class="group-grid">
-      <button class="btn-group" onclick="pickRandom('Fresh')">Fresh</button>
-      <button class="btn-group" onclick="pickRandom('Floral')">Floral</button>
-      <button class="btn-group" onclick="pickRandom('Warm/Spicy')">Warm / Spicy</button>
-      <button class="btn-group" onclick="pickRandom('Date Night')">Date Night</button>
+      <button class="btn-group" onclick="pickRandom('Fresh')">fresh</button>
+      <button class="btn-group" onclick="pickRandom('Floral')">floral</button>
+      <button class="btn-group" onclick="pickRandom('Warm/Spicy')">warm / spicy</button>
+      <button class="btn-group" onclick="pickRandom('Date Night')">date night</button>
     </div>
 
     <div id="result-container"></div>
     <div id="undo-container"></div>
   </section>
 
-  <!-- VIEW 2: FIND A SPOT -->
+  <!-- view 2: find a spot -->
   <section id="view-find" class="view">
-    <input type="text" id="search-box" class="search-input" placeholder="Search 500 samples by name..." oninput="renderSearch()" />
+    <input type="text" id="search-box" class="search-input" placeholder="search 500 samples by name..." oninput="renderSearch()" />
     <div id="search-results"></div>
 
     <div class="backup-box">
-      <button onclick="copyBackup()">📋 Copy Used List</button>
-      <button onclick="restoreBackup()">📥 Restore List</button>
+      <button onclick="copyBackup()">copy used list</button>
+      <button onclick="restoreBackup()">restore list</button>
     </div>
   </section>
 
