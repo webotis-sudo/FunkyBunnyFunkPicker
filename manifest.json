@@ -1,9 +1,15 @@
 {
-  "name": "Perfume Sample Picker",
+  "name": "FunkyBunnyFunkPicker",
   "short_name": "Scent Picker",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#f8f9fa",
-  "theme_color": "#111827"
+  "background_color": "#F3E8C8",
+  "theme_color": "#3A7D7C",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
-
